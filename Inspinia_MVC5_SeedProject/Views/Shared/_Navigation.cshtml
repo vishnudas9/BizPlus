@@ -9,7 +9,7 @@
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <h2 class="font-bold">Erypso <b>BiZ+</b></h2>
+                                <strong class="font-bold" style="color:#ffffff;font-size:20px">Erypso <b>BiZ+</b></strong>
                             </span> <span class="text-muted text-xs block">Vishnudas A <b class="caret"></b></span>
                         </span>
                     </a>
@@ -24,7 +24,7 @@
                 </div>
             </li>
             <li class="@Html.IsSelected(controller: "Index")">
-                <a href="@Url.Action("Index","Home")"><i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboard</span> </a>
+                <a href="@Url.Action("Index","Home")"><i class="fa fa-tachometer"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboard</span> </a>
 
             </li>
 
@@ -34,7 +34,7 @@
             </li>
 
             <li class="@Html.IsSelected(controller: "Customers")">
-                <a href="@Url.Action("Customers", "Customers")"><i class="fa fa-user-o"></i> <span class="nav-label" data-i18n="nav.Customers">Customers</span> <span class="fa arrow"></span></a>
+                <a href="@Url.Action("Customers", "Customers")"><i class="fa fa-user-circle-o"></i> <span class="nav-label" data-i18n="nav.Customers">Customers</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Customers", cssClass: "in")">
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Customers", "Customers")">New Registration</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_2", "Customers")">Manage Customers</a></li>
@@ -43,7 +43,7 @@
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Track Outstandings</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Overdues</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Locate in Map</a></li>
-                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">View Client Performance</a></li>
+                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">View Customer Activity</a></li>
                 </ul>
             </li>
 
@@ -97,6 +97,15 @@
 
 
                     <li><a href="#">Setup Item Pricing </a></li>
+
+                    <li>
+                        <a href="#">Sales Routes <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li><a href="#">Assign Routes</a></li>
+                            <li><a href="#">Route History</a></li>
+                            
+                        </ul>
+                    </li>
 
                 </ul>
             </li>
@@ -162,7 +171,9 @@
                         </ul>
                     </li>
                     <li><a href="#">Other Staffs</a></li>
+                    <li><a href="#">Payroll</a></li>
                     <li><a href="#">Track Sales Staff Performance</a></li>
+
                 </ul>
             </li>
 
@@ -174,8 +185,8 @@
                         <a href="#">Customer Specific <span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li><a href="#">All Customer Transactions</a></li>
-                            <li><a href="#">Credit Notes</a></li>
-                            <li><a href="#">Debit Notes</a></li>
+                            @*<li><a href="#">Credit Notes</a></li>
+                            <li><a href="#">Debit Notes</a></li>*@
                             <li><a href="#">Bill Payments</a></li>
                         </ul>
                     </li>
@@ -244,8 +255,8 @@
                             <li><a href="#">Outstanding Payments</a></li>
                             <li><a href="#">Inactive Customers</a></li>
                             <li><a href="#">Overdue Reports</a></li>
-                            <li><a href="#">Credit Notes</a></li>
-                            <li><a href="#">Debit Notes</a></li>
+                            @*<li><a href="#">Credit Notes</a></li>
+                            <li><a href="#">Debit Notes</a></li>*@
                         </ul>
                     </li>
 
@@ -256,7 +267,7 @@
                             <li><a href="#">Cancelled / Rejected Orders</a></li>
                             <li><a href="#">Order Alteration Reports</a></li>
                             <li><a href="#">Delayed / Pending Orders</a></li>
-                            <li><a href="#">Branch wise Reports</a></li>                           
+                            <li><a href="#">Branch wise Reports</a></li>
                         </ul>
                     </li>
 
@@ -271,13 +282,33 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a href="#">Sales Returns <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li><a href="#">Returned Item Reports</a></li>
+                            <li><a href="#">Item Verification Reports</a></li>
+                            <li><a href="#">Non Verified Returns</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Stock Reports <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li><a href="#">Current Stock</a></li>
+                            <li><a href="#">Stock Requirements</a></li>
+                            <li><a href="#">Low on Stocks</a></li>
+                            <li><a href="#">Out of Stock Items</a></li>
+                            <li><a href="#">Stock Transfers</a></li>
+                        </ul>
+                    </li>
 
 
                 </ul>
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-save"></i> <span class="nav-label" data-i18n="nav.menulevels">Sytem Settings</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label" data-i18n="nav.menulevels">Sytem Settings</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="#">BiZ+ Settings</a></li>
                     <li><a href="#">Admin Panel Settings</a></li>
@@ -292,6 +323,10 @@
                 </ul>
             </li>
 
+            <li class="@Html.IsSelected(controller: "Index")">
+                <a href="@Url.Action("Index","Home")"><i class="fa fa-question-circle"></i> <span class="nav-label" data-i18n="nav.dashboard">Help</span> </a>
+
+            </li>
 
         </ul>
     </div>

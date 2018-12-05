@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErypsoBiZ+", "Inspinia_MVC5_SeedProject\ErypsoBiZ+.csproj", "{86CADB26-5817-46B6-88C7-76D5753722C3}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErypsoBizPlus", "Inspinia_MVC5_SeedProject\ErypsoBizPlus.csproj", "{86CADB26-5817-46B6-88C7-76D5753722C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D88F79E2-41A2-474F-9C30-E80A3F019853}
 	EndGlobalSection
 EndGlobal

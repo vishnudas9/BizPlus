@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Inspinia_MVC5_SeedProject.Models
+namespace ErypsoBizPlus.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
