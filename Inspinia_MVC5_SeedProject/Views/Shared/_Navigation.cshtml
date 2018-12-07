@@ -36,8 +36,8 @@
             <li class="@Html.IsSelected(controller: "Customers")">
                 <a href="@Url.Action("Customers", "Customers")"><i class="fa fa-user-circle-o"></i> <span class="nav-label" data-i18n="nav.Customers">Customers</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Customers", cssClass: "in")">
-                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Customers", "Customers")">New Registration</a></li>
-                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_2", "Customers")">Manage Customers</a></li>
+                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("NewCustomerRegistration", "Customer")">New Registration</a></li>
+                    <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("CustomerList", "Customer")">Manage Customers</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Pending Approvals</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Price Class / Credit Allocation</a></li>
                     <li class="@Html.IsSelected(action: "Customers")"><a href="@Url.Action("Dashboard_3", "Customers")">Track Outstandings</a></li>

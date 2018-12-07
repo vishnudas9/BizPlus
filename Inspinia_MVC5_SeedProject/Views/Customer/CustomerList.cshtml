@@ -1,0 +1,371 @@
+﻿
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Customers</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+
+            <li class="active">
+                <strong>Customers</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+        
+    </div>
+    
+</div>*@
+
+<div class="row">
+
+    
+    
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content animated fadeInUp">
+
+            <div class="ibox collapsed">
+                <div class="ibox-title">
+                    <h5>Apply Filters</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        @*<ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#">Config option 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Config option 2</a>
+                            </li>
+                        </ul>*@
+                        
+                    </div>
+                </div>
+                <div class="ibox-content" style="display: none;">
+
+                    <p>
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    </p>
+                    <p>
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Customer List</h5>
+                    <div class="ibox-tools">
+                        <a href="@Url.Action("NewCustomerRegistration", "Customer")" class="btn btn-primary btn-xs">Create New Customer</a>
+                    </div>
+
+                </div>
+                <div class="ibox-content">
+                    <div class="row m-b-sm m-t-sm">
+                        <div class="col-md-1">
+                            <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> Refresh</button>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-list">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="project-title">
+                                        <b>Status</b>
+                                    </th>
+                                    <th class="project-title">
+                                        Customer
+                                    </th>
+                                    <th class="project-completion">
+                                        Payment Completion
+                                    </th>
+                                    <th class="project-people">
+                                        Balance
+                                    </th>
+                                    <th class="project-actions">
+                                        Actions
+                                    </th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("CustomerDetails", "Customer")">Contract with Zender Company</a>
+                                        <br />
+                                        <small>Created 14.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 48%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 48%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 24000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">There are many variations of passages</a>
+                                        <br />
+                                        <small>Created 11.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 28%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 28%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-default">Unactive</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Many desktop publishing packages and web</a>
+                                        <br />
+                                        <small>Created 10.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 8%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 8%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Letraset sheets containing</a>
+                                        <br />
+                                        <small>Created 22.07.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 83%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 83%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Contrary to popular belief</a>
+                                        <br />
+                                        <small>Created 14.07.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 97%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 97%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Contract with Zender Company</a>
+                                        <br />
+                                        <small>Created 14.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 48%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 48%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">There are many variations of passages</a>
+                                        <br />
+                                        <small>Created 11.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 28%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 28%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-default">Unactive</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Many desktop publishing packages and web</a>
+                                        <br />
+                                        <small>Created 10.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 8%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 8%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Letraset sheets containing</a>
+                                        <br />
+                                        <small>Created 22.07.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 83%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 83%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action("ProjectDetail", "AppViews")">Contrary to popular belief</a>
+                                        <br />
+                                        <small>Created 14.07.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 97%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 97%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-status">
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="project-title">
+                                        <a href="@Url.Action(" projectdetail", "AppViews" )">There are many variations of passages</a>
+                                        <br />
+                                        <small>Created 11.08.2014</small>
+                                    </td>
+                                    <td class="project-completion">
+                                        <small>Completion with: 28%</small>
+                                        <div class="progress progress-mini">
+                                            <div style="width: 28%;" class="progress-bar"></div>
+                                        </div>
+                                    </td>
+                                    <td class="project-people">
+                                        <strong>Rs 240000</strong>
+                                    </td>
+                                    <td class="project-actions">
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

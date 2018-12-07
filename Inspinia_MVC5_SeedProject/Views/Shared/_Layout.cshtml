@@ -8,6 +8,15 @@
     <title>Erypso | @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/font-awesome/css")
+    <style>
+        .biz-border{ border:1px solid #a1a1a1; }
+        .biz-btn-hover:hover {            
+            background-color:#368ed7;
+        }
+        .biz-required {
+            color: #b51924;
+        }
+    </style>
 </head>
 <body class="md-skin">
 
@@ -28,6 +37,8 @@
 
             <!-- Footer -->
             @Html.Partial("_Footer")
+
+            @Html.Partial("_RightSidebar")
 
         </div>
         <!-- End page wrapper-->
